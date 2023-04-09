@@ -1,15 +1,14 @@
-from ._private import (ModelLoader,
-                       TitleLoader,
-                       ModelWithFKLoader,
-                       load_models,
-                       delete_models)
-from django.core.management.base import (BaseCommand,
-                                         CommandParser,
-                                         CommandError)
-from reviews.models import Category, Genre, Title, Review, Comment
 import pathlib
-from django.contrib.auth import get_user_model
 from typing import Dict
+
+from django.contrib.auth import get_user_model
+from django.core.management.base import (BaseCommand, CommandError,
+                                         CommandParser)
+from reviews.models import Category, Comment, Genre, Review, Title
+
+from ._private import (ModelLoader, ModelWithFKLoader, TitleLoader,
+                       delete_models, load_models)
+
 User = get_user_model()
 
 

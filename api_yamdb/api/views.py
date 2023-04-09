@@ -1,3 +1,9 @@
+from api.permissions import IsAdmin, IsAuthor, IsModerator, IsUser, ReadOnly
+from api.serializers import (AuthSignupSerializer, AuthTokenSerializer,
+                             CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             TitleGetSerializer, TitleModifySerializer,
+                             UserRoleReadOnlySerializer, UserSerializer)
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import default_token_generator
@@ -8,24 +14,15 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
-from rest_framework.mixins import (
-    CreateModelMixin, DestroyModelMixin, ListModelMixin
-)
-from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
+from rest_framework.mixins import (CreateModelMixin, DestroyModelMixin,
+                                   ListModelMixin)
+from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
 from rest_framework_simplejwt.tokens import RefreshToken
 from reviews.models import Category, Comment, Genre, Review, Title
-from api.permissions import IsAdmin, IsAuthor, IsModerator, IsUser, ReadOnly
-from api.serializers import (
-    AuthSignupSerializer, AuthTokenSerializer,
-    CategorySerializer, CommentSerializer,
-    GenreSerializer, ReviewSerializer,
-    TitleGetSerializer, TitleModifySerializer,
-    UserSerializer, UserRoleReadOnlySerializer,
-)
-from .filters import TitleFilter
 
+from .filters import TitleFilter
 
 User = get_user_model()
 

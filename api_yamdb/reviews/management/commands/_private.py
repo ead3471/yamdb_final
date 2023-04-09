@@ -1,7 +1,8 @@
-from reviews.models import Category, Title
-from django.db.models.base import ModelBase
-from typing import Dict, List
 import csv
+from typing import Dict, List
+
+from django.db.models.base import ModelBase
+from reviews.models import Category, Title
 
 
 class ModelLoader:
