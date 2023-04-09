@@ -48,8 +48,7 @@ class UserViewSet(ModelViewSet):
         self.kwargs['username'] = request.user
         if request.method == "GET":
             return self.retrieve(request)
-        elif request.method == "PATCH":
-            return self.partial_update(request)
+        return self.partial_update(request)
 
 
 class AuthViewSet(GenericViewSet):
@@ -87,11 +86,11 @@ class AuthViewSet(GenericViewSet):
                 user = serializer.save()
                 self.send_confirmation_code(user)
                 return Response(serializer.data, status=status.HTTP_200_OK)
-            else:
-                return Response(
-                    serializer.errors,
-                    status=status.HTTP_400_BAD_REQUEST
-                )
+
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
         self.send_confirmation_code(user)
         return Response(request.data, status=status.HTTP_200_OK)
 
