@@ -45,7 +45,8 @@ jobs:
     steps:
       - name: Debug
         run: |
-          ls
+        cd api_yamdb
+        ls
 
       - name: Check out the repo
         # Проверка доступности репозитория Docker Hub для workflow
