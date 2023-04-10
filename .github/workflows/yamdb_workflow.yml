@@ -35,7 +35,9 @@ jobs:
         python -m flake8
     - name: Django tests
       run: |
-        cd infra_project
+        echo ${GITHUB_WORKSPACE} 
+        ls
+        cd yamdb_final
         python manage.py test
 
   build_and_push_to_docker_hub:
