@@ -93,14 +93,14 @@ jobs:
       - name: create_superuser
         with:
           context: ./api_yamdb/
-        run: |
-          python manage.py migrate
-          python manage.py collectstatic --no-input
+          run: |
+            python manage.py migrate
+            python manage.py collectstatic --no-input
 
 
   send_final_message:
     runs-on: ubuntu-latest
-    needs: deploy
+    needs: django_db_prepare
     steps:
     - name: send message
       uses: appleboy/telegram-action@master
