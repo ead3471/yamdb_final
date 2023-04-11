@@ -90,7 +90,7 @@ jobs:
 
   send_final_message:
     runs-on: ubuntu-latest
-    needs: django_db_prepare
+    needs: deploy
     steps:
     - name: send message
       uses: appleboy/telegram-action@master
