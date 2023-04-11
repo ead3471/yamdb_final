@@ -92,6 +92,8 @@ jobs:
     steps:
       - name: create_superuser
         run: |
+          pwd
+          ls
           cd api_yamdb
           python manage.py migrate
           python manage.py collectstatic --no-input
