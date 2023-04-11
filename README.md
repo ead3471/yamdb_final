@@ -63,3 +63,6 @@ python3 manage.py runserver
 ### API specification
 
 Complete API specification is available [here in YAML format](https://github.com/ead3471/api_yamdb/blob/master/api_yamdb/static/redoc.yaml) or at http://127.0.0.1:8000/redoc after project deployment.
+
+
+[![Django-app workflow](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yml)

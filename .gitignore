@@ -149,8 +149,8 @@ dmypy.json
 
 
 #!/static
-static/data/
-#!static/redoc.yaml
+static/
+!static/redoc.yaml
 
 
 posts/static/
