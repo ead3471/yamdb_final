@@ -91,11 +91,10 @@ jobs:
     needs: deploy
     steps:
       - name: create_superuser
-        with:
-          context: ./api_yamdb/
-          run: |
-            python manage.py migrate
-            python manage.py collectstatic --no-input
+        run: |
+          cd api_yamdb
+          python manage.py migrate
+          python manage.py collectstatic --no-input
 
 
   send_final_message:
