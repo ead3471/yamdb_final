@@ -1,5 +1,5 @@
 ### Description
-[![Django-app workflow](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yml)
+[![Django-app workflow](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yaml)
 
 Project is available at http://158.160.44.52
 
