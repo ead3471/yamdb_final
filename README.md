@@ -1,8 +1,6 @@
-### Description
 [![Django-app workflow](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)](https://github.com/ead3471/yamdb_final/actions/workflows/yamdb_workflow.yaml)
-
+### Description
 Project is available at http://158.160.44.52
-
 Full project APi description is available at http://158.160.44.52/redoc
 
 **YAMDB** project is a popular artworks review platform that contains brief information about various pieces of art and gives users possibility to leave personal reviews and comments.
@@ -27,10 +25,9 @@ Below are the steps required for each type of project deployment. Please note th
 
 ### Local deployment
 
-1. Install Docker
-install Docker using official documentation:
-- for [Windows и MacOS](https://www.docker.com/products/docker-desktop)
-- for [Linux](https://docs.docker.com/engine/install/ubuntu/). Separate installation [Docker Compose](https://docs.docker.com/compose/install/) will be required
+1. Install Docker <br>
+- docker installation manual for [Windows и MacOS](https://www.docker.com/products/docker-desktop)
+- docker installation manual for [Linux](https://docs.docker.com/engine/install/ubuntu/). Separate installation [Docker Compose](https://docs.docker.com/compose/install/) will be required
 
 
 2. Clone git repository and navigate to the cloned repository in the CLI:
