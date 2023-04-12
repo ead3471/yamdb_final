@@ -31,7 +31,6 @@ class TestWorkflow:
 
         filename = yaml if is_yaml else yml
 
-        print("!!!!!!!!!!!!", root_dir)
         try:
             with open(f'{os.path.join(root_dir, filename)}', 'r') as f:
                 yamdb = f.read()
