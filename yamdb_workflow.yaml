@@ -1,6 +1,7 @@
 name: Django-app workflow
 
 on: [push]
+
 jobs:
   tests:
     runs-on: ubuntu-latest
@@ -26,7 +27,7 @@ jobs:
     - name: Django tests
       run: |
         cd api_yamdb
-        python manage.py test
+        python -m pytest
   
   send_message_on_tests_end:
     runs-on: ubuntu-latest
