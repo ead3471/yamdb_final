@@ -30,7 +30,7 @@ jobs:
   
   send_message_on_tests_end:
     runs-on: ubuntu-latest
-    needs: Django tests
+    needs: tests
     steps:
     - name: send message
       uses: appleboy/telegram-action@master
