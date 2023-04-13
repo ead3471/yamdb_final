@@ -100,7 +100,7 @@ scp -r nginx  <user>@<server-address>:.
 
 ### API specification
 
-Complete API specification is available at /redoc after project deployment.
+Complete API specification is available at [your server address]/redoc after project deployment.
 
 ### Authors:
  - Gubarik Vladimir
