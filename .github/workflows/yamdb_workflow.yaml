@@ -37,7 +37,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.workflow }} tests is done! Started by ${{github.event}} to ${{github.ref}} by @${{github.actor}}} 
+        message: ${{ github.workflow }} tests is done! Started by ${{github.event_name}} to ${{github.ref}} by @${{github.actor}}} 
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
@@ -102,4 +102,4 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.workflow }} deploy is done! Started by ${{github.event}} to {{github.ref}} by @{{github.actor}}} 
+        message: ${{ github.workflow }} deploy is done! Started by ${{github.event_name}} to {{github.ref}} by @{{github.actor}}
